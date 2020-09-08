@@ -1,0 +1,115 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th2 20, 2020 lúc 08:38 PM
+-- Phiên bản máy phục vụ: 10.3.16-MariaDB
+-- Phiên bản PHP: 7.3.7
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Cơ sở dữ liệu: `test`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `calendar`
+--
+
+CREATE TABLE `calendar` (
+  `id` int(11) NOT NULL,
+  `p` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `z` int(11) NOT NULL,
+  `i` int(11) NOT NULL,
+  `p_i` int(11) NOT NULL,
+  `start` date NOT NULL,
+  `end` date NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `t1` date DEFAULT NULL,
+  `t2` date DEFAULT NULL,
+  `t3` date DEFAULT NULL,
+  `t4` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `calendar`
+--
+
+INSERT INTO `calendar` (`id`, `p`, `z`, `i`, `p_i`, `start`, `end`, `created_at`, `updated_at`, `t1`, `t2`, `t3`, `t4`) VALUES
+(1, '1', 13, 4, 12, '2018-12-31', '2019-01-27', NULL, NULL, NULL, NULL, NULL, NULL),
+(2, '2', 13, 4, 12, '2019-01-28', '2019-02-24', NULL, NULL, NULL, NULL, NULL, NULL),
+(3, '3', 13, 1, 13, '2019-02-25', '2019-03-24', NULL, NULL, NULL, NULL, NULL, NULL),
+(4, '4', 13, 1, 13, '2019-03-25', '2019-04-21', NULL, NULL, NULL, NULL, NULL, NULL),
+(5, '5', 13, 1, 13, '2019-04-22', '2019-05-19', NULL, NULL, NULL, NULL, NULL, NULL),
+(6, '6', 13, 2, 13, '2019-05-20', '2019-06-16', NULL, NULL, NULL, NULL, NULL, NULL),
+(7, '7', 13, 2, 13, '2019-06-17', '2019-07-14', NULL, NULL, NULL, NULL, NULL, NULL),
+(8, '8', 13, 2, 13, '2019-07-15', '2019-08-11', NULL, NULL, NULL, NULL, NULL, NULL),
+(9, '9', 13, 3, 13, '2019-08-12', '2019-09-08', NULL, NULL, NULL, NULL, NULL, NULL),
+(10, '10', 13, 3, 13, '2019-09-09', '2019-10-06', NULL, NULL, NULL, NULL, NULL, NULL),
+(11, '11', 13, 3, 13, '2019-10-07', '2019-11-03', NULL, NULL, NULL, NULL, NULL, NULL),
+(12, '12', 13, 4, 13, '2019-11-04', '2019-12-01', NULL, NULL, NULL, NULL, NULL, NULL),
+(13, '13', 13, 4, 13, '2019-12-02', '2019-12-29', NULL, NULL, NULL, NULL, NULL, NULL),
+(14, '1', 14, 4, 13, '2019-12-30', '2020-01-26', NULL, NULL, NULL, NULL, NULL, NULL),
+(15, '2', 14, 4, 13, '2020-01-27', '2020-02-23', NULL, NULL, '2020-01-27', '2020-02-03', '2020-02-10', '2020-02-17'),
+(16, '3', 14, 1, 14, '2020-02-24', '2020-03-22', NULL, NULL, '2020-02-24', '2020-03-02', '2020-03-09', '2020-03-16'),
+(17, '4', 14, 1, 14, '2020-03-23', '2020-04-19', NULL, NULL, NULL, NULL, NULL, NULL),
+(18, '5', 14, 1, 14, '2020-04-20', '2020-05-17', NULL, NULL, NULL, NULL, NULL, NULL),
+(19, '6', 14, 2, 14, '2020-05-18', '2020-06-14', NULL, NULL, NULL, NULL, NULL, NULL),
+(20, '7', 14, 2, 14, '2020-06-15', '2020-07-12', NULL, NULL, NULL, NULL, NULL, NULL),
+(21, '8', 14, 2, 14, '2020-07-13', '2020-08-09', NULL, NULL, NULL, NULL, NULL, NULL),
+(22, '9', 14, 3, 14, '2020-08-10', '2020-09-06', NULL, NULL, NULL, NULL, NULL, NULL),
+(23, '10', 14, 3, 14, '2020-09-07', '2020-10-04', NULL, NULL, NULL, NULL, NULL, NULL),
+(24, '11', 14, 3, 14, '2020-10-05', '2020-11-01', NULL, NULL, NULL, NULL, NULL, NULL),
+(25, '12', 14, 4, 14, '2020-11-02', '2020-12-29', NULL, NULL, NULL, NULL, NULL, NULL),
+(26, '13', 14, 4, 14, '2020-11-30', '2020-12-27', NULL, NULL, NULL, NULL, NULL, NULL),
+(27, '1', 15, 4, 14, '2020-12-28', '2021-01-24', NULL, NULL, NULL, NULL, NULL, NULL),
+(28, '2', 15, 4, 14, '2021-01-25', '2021-02-21', NULL, NULL, NULL, NULL, NULL, NULL),
+(29, '3', 15, 1, 15, '2021-02-22', '2021-03-21', NULL, NULL, NULL, NULL, NULL, NULL),
+(30, '4', 15, 1, 15, '2021-03-22', '2021-04-18', NULL, NULL, NULL, NULL, NULL, NULL),
+(31, '5', 15, 1, 15, '2021-04-19', '2021-05-16', NULL, NULL, NULL, NULL, NULL, NULL),
+(32, '6', 15, 2, 15, '2021-05-17', '2021-06-13', NULL, NULL, NULL, NULL, NULL, NULL),
+(33, '7', 15, 2, 15, '2021-06-14', '2021-07-11', NULL, NULL, NULL, NULL, NULL, NULL),
+(34, '8', 15, 2, 15, '2021-07-12', '2021-08-08', NULL, NULL, NULL, NULL, NULL, NULL),
+(35, '9', 15, 3, 15, '2021-08-09', '2021-09-05', NULL, NULL, NULL, NULL, NULL, NULL),
+(36, '10', 15, 3, 15, '2021-09-06', '2021-10-03', NULL, NULL, NULL, NULL, NULL, NULL),
+(37, '11', 15, 3, 15, '2021-10-04', '2021-10-31', NULL, NULL, NULL, NULL, NULL, NULL),
+(38, '12', 15, 4, 15, '2021-11-01', '2021-11-28', NULL, NULL, NULL, NULL, NULL, NULL),
+(39, '13', 15, 4, 15, '2021-11-29', '2021-12-26', NULL, NULL, NULL, NULL, NULL, NULL);
+
+--
+-- Chỉ mục cho các bảng đã đổ
+--
+
+--
+-- Chỉ mục cho bảng `calendar`
+--
+ALTER TABLE `calendar`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT cho các bảng đã đổ
+--
+
+--
+-- AUTO_INCREMENT cho bảng `calendar`
+--
+ALTER TABLE `calendar`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
